@@ -14,12 +14,12 @@ const { supabase } = require('./supabase');
 
 const app = express();
 
-// Middleware
+// Middlewarea
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // CORS configuration
-const corsOrigins = process.env.CORS_ORIGINS?.split(',') || ['http://localhost:5173', 'http://localhost:5174'];
+const corsOrigins = process.env.CORS_ORIGINS?.split(',') || ['http://localhost:5173', 'http://localhost:5174','https://quanlynhatrobatuat.netlify.app'];
 app.use(cors({
   origin: corsOrigins,
   credentials: true,
