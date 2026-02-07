@@ -55,8 +55,12 @@ echo   Note: First time setup?
 echo   1. Make sure you ran the SQL script in Supabase
 echo   2. Run: cd backend ^&^& npm run seed
 echo.
-echo   Press any key to open Admin in browser...
-pause > nul
+echo   Opening Admin and Client in browser...
+timeout /t 2 /nobreak > nul
 
-:: Open Admin in default browser
+:: Open Admin and Client in default browser
 start http://localhost:5173
+start http://localhost:5174
+
+echo   Done! Press any key to close this window...
+pause > nul
